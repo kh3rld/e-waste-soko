@@ -12,6 +12,6 @@ type User struct {
 	Email     string    `gorm:"size:100;not null"`
 	Password  string    `gorm:"not null"`
 	UserType  string    `gorm:"size:20;not null"`
-	Points    []Tokens  `gorm:"default:0"`
-	WasteType []Waste   `gorm:"foreignKey:BroughtBy"`
+	Points    []Tokens  `gorm:"foreignKey:UserID"`
+	WasteType []Waste   `gorm:"foreignKey:BroughtByID"`
 }
