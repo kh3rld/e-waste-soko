@@ -1,11 +1,17 @@
 package models
 
+import (
+	"github.com/google/uuid"
+	"gorm.io/gorm"
+)
+
 type User struct {
-	Id int
-	Name string
-	Email string
-	Password string
-	UserType string
-	Points int
-	WasteType []Waste
+	gorm.Model
+	Id        uuid.UUID `gorm:"primaryKey"`
+	Name      string    `gorm:"size:100;not null"`
+	Email     string    `gorm:"size:100;not null"`
+	Password  string    `gorm:"not null"`
+	UserType  string    `gorm:"size:20;not null"`
+	Points    []Tokens  `gorm:"default:0"`
+	WasteType []Waste   `gorm:"foreignKey:BroughtBy"`
 }
