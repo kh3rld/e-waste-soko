@@ -39,6 +39,10 @@ func ParseJWT(tokenString string) (jwt.MapClaims, error) {
 }
 
 func HashPswd(pass string) (string, error) {
-    hashedPswd, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
-    return string(hashedPswd), err
+	hashedPswd, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
+	return string(hashedPswd), err
+}
+
+func CheckPasswordHash(password, hash string) bool {
+	return bcrypt.CompareHashAndPassword([]byte(hash), []byte(password)) == nil
 }
