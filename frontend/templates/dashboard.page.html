@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycler Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Admin Dashboard</h1>
+            <nav class="nav">
+                <a href="#">Profile</a>
+                <a href="#">Logout</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="features">
+                <h2>Dashboard Features</h2>
+                <div class="feature-card">
+                    <h3>Orders</h3>
+                    <p>Manage and view all orders from waste owners.</p>
+                    <button onclick="location.href='orders.html'">View Orders</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Pickup Requests</h3>
+                    <p>View and manage pickup requests from waste owners.</p>
+                    <button onclick="location.href='pickup_requests.html'">Manage Pickups</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Payments</h3>
+                    <p>Manage your payments and view transaction history.</p>
+                    <button onclick="location.href='payments.html'">View Payments</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 E-Waste Management. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
