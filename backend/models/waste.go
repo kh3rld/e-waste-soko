@@ -11,5 +11,6 @@ type Waste struct {
 	Name        string    `gorm:"size:100;not null"`
 	Description string    `gorm:"type:text;not null"`
 	Condition   string    `gorm:"size:100;not null"`
-	BroughtBy   []User    `gorm:"foreignKey:BroughtBy"`
+	BroughtByID uuid.UUID `gorm:"not null"`
+	BroughtBy   User      `gorm:"foreignKey:BroughtByID"`
 }
