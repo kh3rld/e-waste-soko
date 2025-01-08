@@ -5,6 +5,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
+	"golang.org/x/crypto/bcrypt"
 )
 
 var jwtSecret = []byte("secret_key")
@@ -35,4 +36,9 @@ func ParseJWT(tokenString string) (jwt.MapClaims, error) {
 		return claims, nil
 	}
 	return nil, jwt.ErrSignatureInvalid
+}
+
+func HashPswd(pass string) (string, error) {
+    hashedPswd, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
+    return string(hashedPswd), err
 }
