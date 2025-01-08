@@ -1,6 +1,6 @@
 module github.com/kh3rld/e-waste-soko
 
-go 1.23.4
+go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.10.0
