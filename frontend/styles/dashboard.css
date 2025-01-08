@@ -1,0 +1,114 @@
+/* Root Variables */
+:root {
+    --primary-color: #FF6F3C; /* Primary color for buttons */
+    --background-color: #FAFAFA; /* Background color */
+    --text-color: #1A1A1A; /* Text color */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: white;
+    margin-right: 20px;
+}
+
+/* Main Section */
+.main {
+    padding: 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: space-between; /* Space out cards evenly */
+}
+
+/* Feature Card Styles */
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between rows */
+    padding: 20px;
+    flex-basis: calc(33% - 20px); /* Default to three cards in a row */
+}
+
+/* Card Titles */
+.feature-card h3 {
+    margin-top: 0;
+}
+
+/* Button Styles */
+.feature-card button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.feature-card button:hover {
+    background-color: darkorange; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+.footer {
+   text-align:center;
+   padding:10px; 
+   background-color:#2D2D2D; 
+   color:white; 
+}
+
+/* Responsive Styles */
+
+/* Tablet and larger screens */
+@media (max-width: 1024px) {
+    .feature-card {
+        flex-basis: calc(50% - 20px); /* Two cards in a row on tablets */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .feature-card {
+        flex-basis: calc(100% - 20px); /* One card in a row on mobile devices */
+        margin-bottom: 15px; /* Reduced space between cards on mobile */
+    }
+
+    .nav a {
+        margin-right: 10px; /* Adjust spacing for navigation links on mobile */
+        font-size: 14px; /* Smaller font size for mobile navigation links */
+    }
+
+    .header h1 {
+        font-size: 1.8em; /* Smaller header size on mobile */
+    }
+
+}
