@@ -1,0 +1,113 @@
+/* Root Variables */
+:root {
+    --primary-color: #FF6F3C; /* Header background color */
+    --secondary-color: #FAFAFA; /* Body background color */
+    --text-color: #1A1A1A; /* Main text color */
+    --footer-background-color: #2D2D2D; /* Footer background color */
+    --card-background-color: #FFFFFF; /* Card background color */
+    --card-border-color: #F3F4F6; /* Card border color */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.header .nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header .nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+.main {
+    padding: 40px 0;
+}
+
+.three-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-background-color);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+/* Desktop */
+@media (min-width: 1025px) {
+    .card {
+        padding: 30px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        padding: 25px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .card {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
