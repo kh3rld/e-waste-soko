@@ -58,7 +58,7 @@ E-Waste Soko is a community-driven platform designed to address the pressing iss
 
 1. Access the PostgreSQL container:
    ```bash
-   docker exec -it postgres-container-name psql -U postgres
+   docker exec -it postgres psql -U postgres
    ```
 2. Create the database:
    ```sql
