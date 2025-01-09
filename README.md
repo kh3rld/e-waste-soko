@@ -15,8 +15,6 @@ E-Waste Soko is a community-driven platform designed to address the pressing iss
 - **Frontend**: HTML, CSS, JavaScript
 - **Database**: PostgreSQL
 - **Containerization**: Docker
-- **Authentication**: Firebase
-- **Messaging**: Twilio API
 
 ## Challenges
 
